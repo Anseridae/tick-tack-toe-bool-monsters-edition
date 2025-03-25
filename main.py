@@ -6,28 +6,13 @@ from logic.turnSystem import nextTurn
 # Todo add goblin passive to regen mana per turn
 # Todo add a check on the heal spell so u can't heal a mob that's already at full health
 # Todo refactor the front end to show the game board and each player's field on a subprocess
+# Todo add the ability to save theme settings via json and also controls
 
 
 """
-Todo for FEN string system:
-a / denotes an empty space, the number after it is how many more spaces after it are empty.
-a capital letter denotes a mob controlled by player 1 a lowercase is controlled by player 2.
-the number after the letter is how many times it's been enraged.
-an h followed by a number is the monsters current health.
-a space followed by another string denotes player 1's field
-a space followed bt another string after the player 1s field denotes player 2's field
-a $ followed by a number denotes a monsters current stamina.
-for now we only care about stamina on the player fields.
-
-Todo figure out how I wanna denote mana and energy.
-
-example FEN string /1W1h2/c2h10/3 /2w1h2#3 /Gh4#0/
-example FEN string /1Wh2h2/c2h5/G1h4/1 ch5#0w1h4#3/ G2h4#1
-
-
 Todo for turn string system:
-4 represents that u summoned the same thing on all 3 slots
-"S" denotes summoning, whatever letters after the s is what you're trying to summon, they could be on slots 1, 2, or 3
+4 represents that u summoned the same thing on all 3 slots.
+"S" denotes summoning, whatever letters after the s is what you're trying to summon, they could be on slots 1, 2, or 3.
 "M" denotes spell casting the <, ^, >, denote which slot you are casting the spell on.
 the letter after is what spell you're casting, the number is how many times you're casting it.
 "F" denotes attacking the board, the <, ^, >, denotes slot on there field they're attacking, the number is which slot on the board the player attacks.

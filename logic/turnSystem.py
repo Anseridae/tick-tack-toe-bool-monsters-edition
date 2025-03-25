@@ -45,7 +45,6 @@ def nextTurn():
 
 def playerTurn(player: dict):
     action = validateInput(["a", "s", "d", "f", "g"],
-                           f"\nlife: {player['life']}\n"
                            f"mana: {player['mana']}\n"
                            f"energy: {player['energy']}\n"
                            f"\nwhat would you like to do?\n"

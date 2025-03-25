@@ -103,22 +103,30 @@ def getPlayerField(playerField: dict):
 
 
 def displayGameBoard():
+    from data.themes import magentaYellow
     from gameBoard import gameBoard
+    from logic.turnSystem import player1
     displayString1 = ["", "", "", ""]
     displayString2 = ["", "", "", ""]
     displayString3 = ["", "", "", ""]
 
     def populateDisplayString(displayString):
         if i:
+            currentColor = magentaYellow
+            if i["player"] == player1["name"]:
+                playerColor = currentColor["primary"]
+            else:
+                playerColor = currentColor["secondary"]
+
             mobName = f"{i['mob']}"
             mobHealth = f"health:  {i['hp']}"
             mobAttack = f"attack:  {i['ap']}"
             mobPlayer = i["player"]
 
-            displayString[0] += f"  |{mobName: ^11}|  "
-            displayString[1] += f"  |{mobHealth: ^11}|  "
-            displayString[2] += f"  |{mobAttack: ^11}|  "
-            displayString[3] += f"  |{mobPlayer: ^11}|  "
+            displayString[0] += f"  {playerColor}|{mobName: ^11}|\033[0m  "
+            displayString[1] += f"  {playerColor}|{mobHealth: ^11}|\033[0m  "
+            displayString[2] += f"  {playerColor}|{mobAttack: ^11}|\033[0m  "
+            displayString[3] += f"  {playerColor}|{mobPlayer: ^11}|\033[0m  "
         else:
             displayString[0] += "  |           |  "
             displayString[1] += "  |  -empty-  |  "

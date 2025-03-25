@@ -20,8 +20,6 @@ def handleSpell(player, spellFunction, spell: str):
         spellFunction(selectedMonster)
 
 
-
-
 def heal(player):
     def spellFunction(selectedMonsterHeal):
         selectedMonsterHeal[0]['hp'] = mobs[selectedMonsterHeal[0]["mob"]]["hp"]
