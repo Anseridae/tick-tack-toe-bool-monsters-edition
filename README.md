@@ -16,7 +16,7 @@ you can hold ctrl and scroll to zoom in or out on the ui.
 
 ## install instructions:
 
-you just need to run it with python
+you just need to run the main.py file with python
 
 
 
